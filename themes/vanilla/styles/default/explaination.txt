@@ -1,0 +1,65 @@
+Hello Nolimits Exchange Forum Users
+
+Since January 2014 I've been checking this forums on a frequent basis and I find it a very awesome community and nice forums.
+But after a while I started to get irritated on the looks, The default Vanilla 1.1.9 theme is pretty bad.
+
+I decided that I should try to make a new theme for this website, and after a week of styling I present you a new look for the NLE Forums.
+
+<h1>How it looks:</h1><h3>Main Page:</h3><img src="http://i.imgur.com/lEC0Rlv.jpg" width="1000px" height="auto">
+As you can see.. this is quite a big change from the original website, and I myself really like it.
+Let me explain a little bit about the main page:
+
+<img src="http://i.imgur.com/l4pEYcE.png"> Identifies a regular post with unread comments
+<img src="http://i.imgur.com/84yM30h.png"> Identifies a regular post where all comments are read
+<img src="http://i.imgur.com/LrVwxoU.png"> Identifies a bookmarked post (Also noticeable from the red title)
+<img src="http://i.imgur.com/ZMW2Xqx.png"> Identifies a sticky post (Also noticeable from the green title)
+<img src="http://i.imgur.com/NIwGHrq.png"> Identifies a closed post or a post in the sink
+
+
+<h3>Disucussion Page:</h3><img src="http://i.imgur.com/43hp4zc.png" width="1000px" height="auto">
+
+The discussion page is pretty self-explanatory. Some notable features are:
+
+-  Images automatically resize to 1000 Pixel when the image is wider to speed up page loading time
+-  Quotes looks like this: 
+     <img src="http://i.imgur.com/tCEyuXF.png">
+-  Code looks like this: 
+     <img src="http://i.imgur.com/2I2llu7.png">
+-  Links look like this: 
+      <img src="http://i.imgur.com/N44wc2a.png">
+
+
+<h3>Categories Page:</h3><img src="http://i.imgur.com/RNzFGxE.png" width="1000px" height="auto">
+<h3>Search Page:</h3><img src="http://i.imgur.com/F5fTyGj.png" width="1000px" height="auto">
+<h3>Accounts Page:</h3><img src="http://i.imgur.com/pnYL7Jc.png" width="1000px" height="auto">
+
+<h1>How to Install:</h1>
+First of all I would like to explain what this actually is;
+This is <strong>NOT</strong> made to be used on the server side, but on the <strong>Client</strong> side.
+That means it is installed on your computer and not on the server, but to minimize the used data all custom images are hosted on <a href="http://www.imgur.com">Imgur</a>.
+
+I've tested this on Chrome and on Firefox and they both need to be installed in a slightly different way, If you are using another browser there might be an alternative way of installing but you'll have to figure that out for yourself, I'm sorry :(
+<h3>Chrome</h3> To install this you will need a plugin for Chrome. The plugin I've tested it with and I can guaranty it works with is <a href="https://chrome.google.com/webstore/detail/stylish/fjnbnpbmkenffdnngjfgmeleoegfcffe?hl=en">Stylish For Chrome</a>.
+So go ahead and install that.
+
+After you have installed the plugin, click on the Stylish button, you'll get a popup that looks like this: 
+<img src="http://i.imgur.com/burSw6q.png">
+Click <cite>'Manage installed styles.'</cite> and then click '<cite>'write new style''</cite>
+
+Copy <a href="http://hastebin.com/raw/puqohuqono">this code</a> inside the [code] form.
+Then click the [Specify] button underneath the code.
+Select <cite>'URL's starting with'</cite> and fill the folowing URL in the bar behind that:
+<code>http://forum.nolimits-exchange.com/</code>
+Give the style a name and click Save
+
+Congratulations, You should have succesfully installed the style!
+
+<h3>Firefox</h3>To install this you will need a plugin for Firefox. The plugin I've tested it with and I can guaranty it works with is <a href="https://addons.mozilla.org/nl/firefox/addon/stylish/">Stylish For Firefox</a>.
+So go ahead and install that.
+
+After you have installed the plugin, click on the Stylish button in your top right corner and click <cite>'Manage styles.'</cite> <h6>(It should be called that, I'm using a dutch version of firefox, so I'm not sure)</h6>
+Click <cite>'Write new style'</cite>, Give the style a name, and copy <a href="http://hastebin.com/raw/ejiyabepit">this code</a>
+Click Save, and that should do it.
+<cite>(Just a quick notifications, the firefox version is still a WIP and some things may look different from the chrome version)</cite>
+<h2> ENJOY </h2>
+<h3>If you found any bugs or other problems, or have a suggestion, Post them down in the comments</h3>

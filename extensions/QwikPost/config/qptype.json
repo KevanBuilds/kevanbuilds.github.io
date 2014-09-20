@@ -1,0 +1,1 @@
+{"embed":"<div style='width:#{width}px' ><embed name='#{name}' width='#{width}' height='#{height}' src='#{src}' type='#{etype}' flashvars='#{flashvars}' wmode='transparent' allowfullscreen=\"true\" bgcolor=\"#ee0000\"><\/embed><\/div>","img":"<img src='#{src}' alt=\"image\" \/>","a":"<a href='#{href}' alt='link' target='_blank' rel='nofollow' >[[_linker_]]<\/a>"}

@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-ca">
+	<head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>QwikPost</title>
+    </head>
+<body>
+<div>
+<p>QwikPost makes the default text formatter media savvy, by autolinking just the way you like it!</p>
+<p>You can easily edit or add more media/types using the simple to use json based tree view config in settings.</p>
+<p>You can also choose to make the magic happen on the sever side, client side or either (as appropriate.</p>
+<p>It is influenced by Make It Simple and JQMedia, but has a number of special features I think you will like.</p>
+<b><span style="text-deoration:underline">FEATURES</span></b>
+<ol>
+<li>As autolinking can go out of date very 'Quik' you can can easily update or add new media and types. As it happens the existing plugins are already out of date on some things. You don't have to rely on me to provide it, and you can do exactly the way you want it to look that is the whole point!</li>
+<li>It comes with a great interface in settings, based on Thomas Frank's JSON editor (thomasfrank.se), but made to work specifically for this. I do not recommend editing the JSON directly not only is it strict JSON, but there are additional rules that you don't need to know about.</li>
+<li>It doesn't need a framework like JQuery to work. As much as they are good, sometimes you don't want it. But if you do have them it is not a problem, because QwikPost has a small footprint.</li>
+<li>You can choose to make the autolinking magic work on:
+    <ul>
+        <li>Server Side</li>
+        <li>Client Side (Javascript)</li>
+        <li>Either (as appropriate)</li>
+    </ul>
+<br />
+<b>[interject]
+... "Wait hold on a sec!!! What do I mean? You can't possibly do both. How do you know which is appropriate?" you ask.<br /><br />Well it is actually not that difficult. When the session begins the first response is sent out and everything was handled on the server side. If the client has javascript it simply pings the server to let it know, and for the remainder of the session the client is lumped with it! Comprende?
+[/interject]</b>
+<br /></li>
+<li>It is designed to work with (and only with) the default text filter ATM, just like Make It Simple. That means if you wanted it to be labelled other than 'Text', by all means change to language files to say 'QwikPost', or 'Qwick Post' or whatever you wish.</li>
+<li>It picks up words starting with 'http://' and from then on it follows your rules.</li>
+<li>The rules are cascading so if you have some link that is likely to match a couple of thing you give a higher priory to the ones you want to take precedent. For your convenience the plain old hyperlink will always be placed last, as I figured this would be a right pain in the arse otherwise. But make no mistake it is not hard coded as media and type. What would be the point of creating the interface if I don't allow you to do what the heck you like with it?!?</li>
+<li>When I say you can do anything you like, I mean it. You don't have to be limited to 'media'. For instance maybe google maps, or google search results using the search API. 3-4 results would be kind of cool to wet the interst don't you think?</li>
+<li>There is a low profile mp3 player supplied that actually works!. Feel fee to add your own hosted media plugins/applets, etc.</li>
+<li>It is compatable with Text Only mode (it will obey and not do anything when 'ON'). </li>
+<li>It is compatable with LowCalVanilla.</li>
+<li>It is compatable with Preview Post. It will render that on the server side.</li>
+<li>There are no silly style sheet sheet tit-bits, that is your job.</li>
+</ol>
+<b><span style="text-deoration:underline">REQUIREMENTS</span></b>
+<ol>
+    <li>PHP5</li>
+    <li>Any browser that is not prehistoric should do for your users. I have tested it on various versions of Firefox/Gecko, IE, Opera, Webkit/KTML. I am antipating some qwirks with Safari, but I don't know. It will probably be alright for genral use.</li>
+    <li>For settings/config you need a modern browser that can do standard AJAX. So if you have Opera 8 or something upgrade it.</li>
+    <li>Only tested on the current version of Vanilla.</li>
+</ol>
+<b><span style="text-deoration:underline">CONFIGURATION</span></b>
+<ul>
+    <li>I plan to provide a few helpful hints in config later, but maybe the best thing to do is to just play around tell be what you think.</li>
+    <li>YYou can access the QwikPost config in settings, there will be a link under "Extension Options" or sumat.</li>
+    <li>There are to main folders in the tree view; 'Media' and 'Type'.</li>
+    <li>Media is basically anything that you might want to link. You don't need to supply a whole url/domain/subdomin. The name is used in the straight text comparison, so whatever is characteristic of the type of link you want to link for that media and type. Generally you want to be specific as you can without limiting unduly. Very unspecific things need to go lower down or they will ruin everything! :cry:</li>
+    <li>Id is a property of the media and is where the pattern matching takes place. It is a regular expression. You can use any part of the expression to replace parts of some or all of your parameters (except type parameter). So for instance using '$0' in a parameter with replace with all of the match, and '$3' will match what is in the third parenthesis.</li>
+    <li>The other parameters are basically the attributes and properties or anything that need to be specified for the media, before being 'meshed' with the type.</li>
+    <li>The other parameters are basically the attributes and properties or anything that need to be specified for the media, before being 'meshed' with the type. </li>
+    <li>Q: What are Types and why do you need them? A: Types are about making things DRY. There is no need to repeat all the markup or text if you are going to use it again for another media. So for instance, just because you are using flash doesn't mean you have to have a flash only type. If you are using the embed tag that can support lots of types of media like DivX plugin, etc. Howver it is up to you. You might have enough characteristics between media that you may with to subdivide more to save you having to specify so many parameters. The point it either way you are still not having to repeat the same markup for every media.</li>
+</ul>
+<b><span style="text-deoration:underline">SPECIAL</span></b>
+<ul>
+   <li>You have two special values that you can using in your <span style="text-deoration:underline">parameters</span>
+    <ul>
+   	    <li>#{vanilla} is the url to where your forum is.</li>
+        <li>#{qwikpost} is the url to the QwikPost extention. </li>
+	</ul>
+    </li>
+    <li>There is no trailing slash for those.</li>
+    <li>I was very OTT about getting the linkage right so should you fuck around with your forum it should find its way, provided default.php is included.</li>
+</ul>
+<b><span style="text-deoration:underline">HOW IT WORKS</span></b>
+<ul>
+   <li>Have a look at the code..</li>
+   <li>It looks for link words and matches them against your media</li>
+   <li>Parameters are updated with whatever part of the match that is needed</li>
+   <li>Then it is meshed with the type and spat out</li>
+   <li>I tried to get the best usability and speed where possible</li>
+</ul>
+<b><span style="text-deoration:underline">OTHER</span></b>
+<ul>
+   <li>It will run slower on the client side with JQMedia, understandably</li>
+   <li>Why you would need both I'm not sure?</li>
+   <li>It will most likely load after JQMedia has finished, which is a while to wait</li>
+</ul>
+<p>BTW This is my first extension for Vanilla. I hope it floats your boat, and doesn't sink it;)</p>
+<form name="{6997CAAD-DD2E-4962-B327-2EF82056C17C}" action="https://www.paypal.com/cgi-bin/webscr" method="post"><small>I did this for fun, but any donations would be wellcomed:</small><br><input name="cmd" value="_s-xclick" type="hidden"><br><input name="hosted_button_id" value="3634917" type="hidden"><br><input src="https://www.paypal.com/en_GB/i/btn/btn_donateCC_LG.gif" name="submit" alt="PayPal - The safer, easier way to pay online." type="image" border="0"><br><img alt="" src="https://www.paypal.com/en_GB/i/scr/pixel.gif" width="1" border="0" height="1"><br></form>
+</div>
+</body>
+</html>

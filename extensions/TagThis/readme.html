@@ -1,0 +1,47 @@
+===================================
+EXTENSION INSTALLATION INSTRUCTIONS
+===================================
+
+In order for Vanilla to recognize an extension, it must be contained within its
+own directory within the extensions directory. So, once you have downloaded and
+unzipped the extension files, you can then place the folder containing the
+default.php file into your installation of Vanilla. The path to your extension's
+default.php file should look like this:
+
+/path/to/vanilla/extensions/TagThis/default.php
+
+Once this is complete, you can enable the extension through the "Manage
+Extensions" form on the settings tab in Vanilla.
+
+===================================
+
+Installing as as simple as enabling the extension and making sure you give yourself permission to edit tags! When you edit, or post a new discussion - there is a field for adding your tags in.
+
+!IMPORTANT! This extension needs the "Set List" extension to get the Settings panel! 
+
+*Features*
+
+ - Tag any discussion.
+ - Tag clouds for individual discussions.
+ - Tag clouds for the overall site.
+ - User specific tag clouds, takes tags from discussions you have started and any discussion you have a BlogThis post in (BlogThis is not mandatory).
+ - Ability to search for discussions by tag by simply clicking the tag.
+ - Adjustable maximum/minimum font size for tag cloud, using linear relationship.
+ - Automatic Tag generation from the title, removing commonly used words.
+ - Option to limit cloud size.
+ - Append ?AutomaticTags=1 to your URL and it will go through every discussion and add tags generated from the titles of your discussions. Only needs doing once!
+ - Automatically detects comma/space separation.
+
+===================================
+
+CHANGELOG
+
+v1.08 - Added settings panel. Added automatic tag generation from title. Added option for limitation of cloud size. Added automatic tagging for all discussions in the forum. Added automatic comma/space separation detection.
+v1.07 - Fixed SQL error when viewing discussions. (sorry!)
+v1.06 - Fixed SQL error when posting new discussion.
+v1.05 - Doesn't let tags from deleted discussions affect the tag clouds.
+v1.04 - Fixed issue that the search panel showed results for tag "" instead of "nothing" for non-tagged searches. Made default behaviour to be that if a tag cloud isn't available for a user or discussion, it will be display the site wide tag cloud instead of none at all.
+v1.03 - (Actually) fixes bug with links not working. Fixes major bug that NEW discussions tags weren't being saved. Removes duplicate tags being posted on a single discussion.
+v1.02 - Fixes bug with links not working. Made it so that if there is no variance in tag weighting, the font size is 100% and not the maximum.
+v1.01 - Fixed bug that stopped you logging out, and a notice when viewing users that hadn't blogged anything.
+v1.00 - Initial Release
